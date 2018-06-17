@@ -18,6 +18,29 @@ namespace WebApplication2.Controllers
             ViewBag.Events = events;
             return View();
         }
+        [HttpGet]
+        public ActionResult Registration(int? Event_Id)
+            {
+                if(Event_Id != null)
+                {
+                    ViewBag.IdEvent = db.Set<Event>().Find(Event_Id);
+
+                    return View();
+                }
+                else
+                {
+                    return null;
+                }
+                
+            }
+        [HttpPost]
+        public string Registration(Registration registration)
+            {
+                registration.Date = DateTime.Now;
+                db.Registrations.Add(registration);
+                db.SaveChanges();
+                return "Спасибо" + registration.Name + registration.SurName + ", за регистрацию!";
+            }
 
         public ActionResult About()
         {

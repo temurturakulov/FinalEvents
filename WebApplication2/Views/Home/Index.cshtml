@@ -5,18 +5,19 @@
     <h3>Список мероприятий</h3>
     <table>
         <tr>
-            <td><p>Название мероприятия</p></td>
-            <td><p>Кол-во человек</p></td>
+            <td style="margin-right=45px;"><p>Название мероприятия</p></td>
             <td><p>Дата и время начала</p></td>
             <td><p>Дата и время окончания</p></td>
+            <td></td>
         </tr>
         @foreach(var b in ViewBag.Events)
         {
         <tr>
+            <td><p>@b.Event_Id</p></td>
             <td><p>@b.EventName</p></td>
-            <td><p>@b.NumberOfPeople</p></td>
             <td><p>@b.StartDate</p></td>
             <td><p>@b.EndDate</p></td>
+            <td><p><a href="/Home/Registration/2">Регистрация</a></p></td>
         </tr>
         }
     </table>
