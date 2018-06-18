@@ -5,7 +5,6 @@
 
 <h3>Регистрация</h3>
 <form method="post">
-    <input type="hidden" value="@ViewBag.IdEvent" name="Event_Id" />
     <table>
         <tr>
             <td><p>Введите свое имя</p></td>
@@ -20,7 +19,7 @@
             <td><input type="text" name="LastName" /></td>
         </tr>
         <tr>
-            <td><p>Введите место рождения</p></td>
+            <td><p>Введите дату рождения</p></td>
             <td><input type="text" name="DateBors" /></td>
         </tr>
         <tr>
@@ -28,6 +27,8 @@
             <td><input type="text" name="Country" /></td>
         </tr>
         <tr>
+            <input type="hidden" value="@ViewBag.IdEvent" name="Event" />
+
             <td><input type="submit" value="Отправить" /></td>
         </tr>
     </table>

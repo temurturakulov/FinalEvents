@@ -5,6 +5,7 @@
     <h3>Список мероприятий</h3>
     <table>
         <tr>
+            <td></td>
             <td style="margin-right=45px;"><p>Название мероприятия</p></td>
             <td><p>Дата и время начала</p></td>
             <td><p>Дата и время окончания</p></td>
@@ -17,7 +18,7 @@
             <td><p>@b.EventName</p></td>
             <td><p>@b.StartDate</p></td>
             <td><p>@b.EndDate</p></td>
-            <td><p><a href="/Home/Registration/2">Регистрация</a></p></td>
+            <td><p><a href="/Home/Registration?Event_Id=@b.Event_Id"> Регистрация </a></p></td>
         </tr>
         }
     </table>
