@@ -5,29 +5,34 @@
 
 <div>
     <h3>Список участников</h3>
-    <table>
-        <tr>
-            <td></td>
-            <td style="margin-right=45px;"><p>Имя</p></td>
-            <td><p>Фамилия</p></td>
-            <td><p>Отчество</p></td>
-            <td><p>Дата рождения</p></td>
-            <td><p>Страна проживания</p></td>
-            <td><p></p></td>
+    <table class="table table-bordered table-inverse">
+        <thead class="thead-dark">
+            <tr>
+                <th align="center">#</th>
+                <td style="margin-right=45px;"><p>Имя</p></td>
+                <td><p>Фамилия</p></td>
+                <td><p>Отчество</p></td>
+                <td><p>Дата рождения</p></td>
+                <td><p>Страна проживания</p></td>
+                <td><p></p></td>
 
-        </tr>
+            </tr>
+        </thead>
         @foreach (var b in ViewBag.Registration)
         {
-        <tr>
-            <td><p>@b.Registration_Id</p></td>
-            <td><p>@b.Name</p></td>
-            <td><p>@b.SurName</p></td>
-            <td><p>@b.LastName</p></td>
-            <td><p>@b.DateBors</p></td>
-            <td><p>@b.Country</p></td>
-            <td><p>@b.Date</p></td>
-            <!--<td><p><a href="/Home/Users"> Регистрация </a></p></td>-->
-        </tr>
+        <tbody>
+            <tr>
+                <th scope="row"><p>@b.Registration_Id</p></th>
+                
+                <td><p>@b.Name</p></td>
+                <td><p>@b.SurName</p></td>
+                <td><p>@b.LastName</p></td>
+                <td><p>@b.DateBors</p></td>
+                <td><p>@b.Country</p></td>
+                
+                <!--<td><p><a href="/Home/Users"> Регистрация </a></p></td>-->
+            </tr>
+        </tbody>
         }
     </table>
 </div>
