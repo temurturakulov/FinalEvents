@@ -13,12 +13,16 @@ namespace WebApplication2.Models
         [Key]
         public int Registration_Id { get; set; }
         [Required]
+        
         public string Name { get; set; }
         [Required]
+        
         public string SurName { get; set; }
         [Required]
+        
         public string LastName { get; set; }
         [Required]
+        
         public DateTime DateBors { get; set; }
         [Required]
         public string Country { get; set; }

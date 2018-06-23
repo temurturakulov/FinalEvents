@@ -4,22 +4,20 @@
 <div>
     <h3>Список мероприятий</h3>
     <table class="table table-bordered " >
-        <thead>
+        <thead class="thead-dark">
             <tr>
-                <th>#</th>
-                
-                <td style="margin-right=45px;"><p>Название мероприятия</p></td>
-                <td><p>Дата и время начала</p></td>
-                <td><p>Дата и время окончания</p></td>
-                <td></td>
+                <th scope="col">#</th>
+                <th scope="col"><p>Название мероприятия</p></th>
+                <th scope="col"><p>Дата и время начала</p></th>
+                <th scope="col"><p>Дата и время окончания</p></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         @foreach(var b in ViewBag.Events)
         {
         <tbody>
             <tr>
-                <th scope="row"><p>@b.Event_Id</p></th>
-                
+                <th scope="row"><p>@b.Event_Id</p></th> 
                 <td><p>@b.EventName</p></td>
                 <td><p>@b.StartDate</p></td>
                 <td><p>@b.EndDate</p></td>

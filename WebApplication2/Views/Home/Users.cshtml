@@ -5,16 +5,16 @@
 
 <div>
     <h3>Список участников</h3>
-    <table class="table table-bordered table-inverse">
+    <table class="table table-bordered ">
         <thead class="thead-dark">
             <tr>
-                <th align="center">#</th>
-                <td style="margin-right=45px;"><p>Имя</p></td>
-                <td><p>Фамилия</p></td>
-                <td><p>Отчество</p></td>
-                <td><p>Дата рождения</p></td>
-                <td><p>Страна проживания</p></td>
-                <td><p></p></td>
+                <th scope="col">#</th>
+                <th  scope="col"><p>Имя</p></th>
+                <th scope="col"><p>Фамилия</p></th>
+                <th scope="col"><p>Отчество</p></th>
+                <th scope="col"><p>Дата рождения</p></th>
+                <th scope="col"><p>Страна проживания</p></th>
+                <th scope="col"><p></p></th>
 
             </tr>
         </thead>
@@ -23,14 +23,13 @@
         <tbody>
             <tr>
                 <th scope="row"><p>@b.Registration_Id</p></th>
-                
                 <td><p>@b.Name</p></td>
                 <td><p>@b.SurName</p></td>
                 <td><p>@b.LastName</p></td>
                 <td><p>@b.DateBors</p></td>
                 <td><p>@b.Country</p></td>
                 
-                <!--<td><p><a href="/Home/Users"> Регистрация </a></p></td>-->
+                
             </tr>
         </tbody>
         }

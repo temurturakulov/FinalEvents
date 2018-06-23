@@ -3,33 +3,38 @@
     ViewBag.Title = "Регистрация";
 }
 
-<h3>Регистрация</h3>
-<form method="post">
-    <table>
-        <tr>
-            <td><p>Введите свое имя</p></td>
-            <td><input type="text" name="Name" /></td>
-        </tr>
-        <tr>
-            <td><p>Введите Фамилию</p></td>
-            <td><input type="text" name="SurName" /></td>
-        </tr>
-        <tr>
-            <td><p>Введите Отчество</p></td>
-            <td><input type="text" name="LastName" /></td>
-        </tr>
-        <tr>
-            <td><p>Введите дату рождения</p></td>
-            <td><input type="text" name="DateBors" /></td>
-        </tr>
-        <tr>
-            <td><p>Введите страну проживания</p></td>
-            <td><input type="text" name="Country" /></td>
-        </tr>
-        <tr>
-            <input type="hidden" value="@ViewBag.IdEvent" name="Event" />
 
-            <td><input type="submit" value="Отправить" /></td>
-        </tr>
-    </table>
+
+<h3>Регистрация</h3>
+<form method="post" class="form-inline" >
+    <div class="input-group input-group-sm col-4 m-0 p-1">
+        <table>
+            <tr>
+                <td><p>Введите свое имя</p></td>
+                <td><input type="text" class="form-control col-lg-11"  name="Name" placeholder="Введите Имя" autofocus required  /></td>
+            </tr>
+            <tr>
+                <td><p>Введите Фамилию</p></td>
+                <td><input type="text" class="form-control col-lg-11"  name="SurName" placeholder="Введите Фамилию" autofocus required /></td>
+            </tr>
+            <tr>
+                <td><p>Введите Отчество</p></td>
+                <td><input type="text" class="form-control col-lg-11"  name="LastName" placeholder="Введите Отчество" autofocus required /></td>
+            </tr>
+            <tr>
+                
+                <td><p>Введите Дату рождения</p></td>
+                <td><input type="date" class="form-control col-lg-12 " name="DateBors"  placeholder="Введите Дату рожденя" autofocus required /></td>
+            </tr>
+            <tr>
+                <td><p>Введите страну проживания</p></td>
+                <td><input type="text" class="form-control col-lg-11 " name="Country" placeholder="Введите страну проживания" autofocus required /></td>
+            </tr>
+            <tr>
+                <input type="hidden" value="@ViewBag.IdEvent" name="Event" />
+
+                <td><input type="submit" class="btn btn-dark" value="Отправить"  /></td>
+            </tr>
+        </table>
+    </div>
 </form>
